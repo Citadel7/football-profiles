@@ -1,0 +1,127 @@
+/*Football Profile*/
+/*General css*/
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-size: 16px;
+}
+
+#app {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100vw;
+}
+
+/*Player profile & img display*/
+#topCont {
+    border-right: 3px solid black;
+    height: 100%;
+    background-color: white;
+    max-width: 40%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+}
+
+#topCont h1:nth-child(1) {
+    text-align: center;
+}
+
+#mainImg {
+    max-width: 100%;
+    height: auto;
+}
+
+#renderedProfile {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+}
+
+#renderedProfile p{
+    margin: 10px;
+    font-size: 1.5rem;
+}
+
+/*Player number styling*/
+#numberCircle {
+    border: 6px double white;
+    border-radius: 360px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 120px;
+    left: 25px;
+    color: white;
+    font-size: 2.1rem;
+}
+
+
+
+/*Main image gallery- player name display*/
+#playerName {
+    background-color: white;
+    border-bottom: 2px solid red;
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    right: 0px;
+    left: 40%;
+    max-width: 100%;
+}
+
+#playerName p {
+    font-size: 2rem;
+    padding: 0px 20px;
+    margin-left: 20px;
+}
+
+
+
+
+
+
+/*Main image gallery*/
+#imageGallery {
+    display: inline-block;
+    max-width: 60%;
+    height: 100vh;
+    background-color: #262626;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin: 0px;
+}
+
+
+.playerImg {
+    position: relative;
+    top: 110px;
+    width: 200px;
+    margin: 10px;
+}
+
+/*White border on img hover*/
+.playerImg:hover {
+    border: 3px solid white;
+}

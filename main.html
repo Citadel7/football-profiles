@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>My vue app</title>
+        <!-- Import Styles -->
+        <link href="styles.css" type="text/css" rel="stylesheet" />
+        <!-- Import Vue.js -->
+        <script src="https://unpkg.com/vue@next"></script>
+    </head>
+    <body>
+        <div id="app">
+            <div id="topCont">
+                <h1>{{ club }} Football Club</h1>
+
+                <!--Main image-->
+                <div id="mainImageCont">
+                    <img v-bind:src="image" id="mainImg" />
+                </div>
+
+                <!--Player profiles-->
+                <div id="renderedProfile">
+                    <div id="numberCircle">
+                        <p v-bind="profile">{{ profile.id }}</p>
+                    </div>
+                    <p v-bind="profile">Position: {{ profile.position }}</p>
+                    <p v-bind="profile">Nationality: {{ profile.nationality }}</p>
+                    <p v-bind="profile">D.O.B: {{ profile.dob }}</p>
+                    <p v-bind="profile">Age: {{ profile.age }}</p>
+                </div>
+            </div>    
+            
+            <!--Player image gallery-->
+            <div id="imageGallery">
+                <div id="playerName">
+                    <p v-bind="profile">Name: {{ profile.name }}</p>
+                </div>
+                <!--List rendered player images-->
+                    <img v-for="(player, index) in playerImages" 
+                        v-bind:key="index"
+                        v-bind:src="player.url" 
+                        class="playerImg"
+                        v-on:mouseover="updatePlayerIndex(index)"/>
+            </div>
+        </div>
+
+        <!--Import vue app-->
+        <script src="main.js"></script>
+
+        <!--Mount vue app-->
+        <script>
+            const mountedApp = app.mount('#app')
+        </script>
+    </body>
+</html>
